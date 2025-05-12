@@ -16,8 +16,7 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: Center(
-          child: Text('안녕하세요', style: TextStyle(fontSize: 50, backgroundColor: Colors.yellow,
-          fontFamily: 'D2coding'),),
+          child: Icon(Icons.favorite, size: 50, color: Colors.pink),
         ),
       ),
     );
