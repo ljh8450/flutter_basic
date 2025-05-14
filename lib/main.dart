@@ -9,36 +9,26 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    var screenHeight = MediaQuery.of(context).size.height;
+
+    print('screenWidth: $screenWidth');
+    print('screenHeight: $screenHeight');
+
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('기본 위젯'),
-          backgroundColor: Colors.blue,
+        body: Column(
+          children: [
+            Flexible(
+              flex: 1,
+                child: Container(
+                  width: screenWidth * 0.5,
+                  height: screenHeight * 0.8,
+                  color: Colors.amber,
+                )
+            ),
+          ],
         ),
-        body: Container(
-          width: double.infinity,
-          height: 400,
-          color: Colors.blue[200],
-          // margin: EdgeInsets.all(50,),
-          // padding: EdgeInsets.all(100),
-          // decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              FlutterLogo(
-                size: 50,
-              ),
-              FlutterLogo(
-                size: 50,
-              ),
-              FlutterLogo(
-                size: 50,
-              ),
-            ],
-          )
-        )
       ),
     );
   }
